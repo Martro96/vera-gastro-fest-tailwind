@@ -1,32 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
-    <!--<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
-    <title>A Mi Vera Battle</title>
-  </head>
-  <body>
-    
-    <div class="container--page">
-      <include src="./views/nav.html"></include>
-        <div class="intro intro-index">
-          <h3  class="intro--subheader">¿Quién dominará los productos del Jerte?</h3>
-          <div class="intro--descripcion">
-            <p  class="descripcion--p">¡Bienvenidos a la competición culinaria de nuestras XVII fiestas del pueblo de Jaraíz de la Vera!</p>
-            <p  class="descripcion--p">En esta emocionante batalla gastronómica, pondremos a prueba vuestra creatividad y destreza en la cocina utilizando los deliciosos productos del Valle del Jerte, ¡con el pimentón como ingrediente estrella!</p>
-            <p  class="descripcion--p p3">¡Animaos a participar y mostrad vuestro talento culinario! La victoria puede estar a solo una receta de distancia.</p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
+  <title>Nuestros chefs</title>
+</head>
+
+<body>
+  <div class="container mx-auto p-4 container--page container--page__chefs">
+    <include src="./views/nav.html"></include>
+    <div>
+      <h1 class="text-3xl font-bold text-center my-4 font-melodrama header-chefs">Aquí os presentamos a los chefs que ya están inscritos en la competición.
+        <br>¡Anímate y participa!
+      </h1>
+    </div>
+    <div class="intro-chef mx-auto">
+      <div class="container-cards-chefs">
+        <!--CHEF 1-->
+        <div class="container-cards-chefs-1 flex flex-wrap justify-center gap-8">
+          <div
+            class="card-chef chef1 bg-white rounded-lg shadow-md overflow-hidden relative flex items-center justify-center w-[280px] h-[380px] mx-auto transition-transform duration-500">
+            <img class="chef-img w-full h-48 object-cover absolute top-0 left-0 rounded-lg"
+              src="./assets/images/chef.jpg" alt="Chef">
+            <div
+              class="info-chef absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/30 to-red-500/60 opacity-0 transition-opacity duration-500">
+              <h2 class="nombre-chef text-xl font-semibold">Rosa María Soto</h2>
+              <p class="descripcion-chef text-gray-600">Con su toque fresco y moderno, Rosa María presenta: "Pimientos
+                Rellenos de Quinoa y Verduras al Estilo del Valle".</p>
+            </div>
           </div>
-        <div class="info-inscripcion">
-          <p class="inscripcion--p ">La competición tendrá lugar el día 13 de agosto de 2024 en la plaza del pueblo </p>
-          <p class="inscripcion--p">Inscripciones abiertas hasta el 30 de junio de 2024</p>
+
+        <!--CHEF 2 -->
+        <div class="card-chef chef2">
+          <img class="chef-img" src="./assets/images/chef2.jpg" alt="Chef">
+          <div class="info-chef">
+            <h2 class="nombre-chef">Mateo García</h2>
+            <p class="descripcion-chef">Para los amantes de lo dulce, Mateo trae: "Cheesecake de Cerezas y
+              Almendras con
+              Base de Dátiles".</p>
+          </div>
         </div>
+
+        <!--CHEF 3 -->
+        <div class="card-chef chef3">
+          <img class="chef-img" src="./assets/images/chef3.jpg" alt="Chef">
+          <div class="info-chef">
+            <h2 class="nombre-chef">Luisa Hernández</h2>
+            <p class="descripcion-chef">Luces y sabores saludables con: "Ensalada Fresca de Picotas, Espinacas y
+              Quinoa
+              con Aderezo de Mostaza y Sirope de Ágave".</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="container-cards-chefs-2">
+
+        <!--CHEF 4 -->
+          <div class="card-chef chef4">
+            <img class="chef-img" src="./assets/images/chef4.jpg" alt="Chef">
+            <div class="info-chef">
+              <h2 class="nombre-chef">Carlos Martínez</h2>
+              <p class="descripcion-chef">Un giro contemporáneo en un clásico: "Guiso Vegano de Garbanzos con
+                Verduras y
+                Pimentón Dulce del Valle".</p>
+            </div>
+          </div>
+
+          <!--CHEF 5 -->
+          <div class="card-chef chef5">
+            <img class="chef-img" src="./assets/images/chef5.jpg" alt="Chef">
+            <div class="info-chef">
+              <h2 class="nombre-chef">Isabel Torres</h2>
+              <p class="descripcion-chef">Para los paladares aventureros: "Tarta de Chocolate con Base de Nueces y
+                Sorpresa de Pimentón Dulce".</p>
+            </div>
+          </div>
+
+          <!--CHEF 6 -->
+          <div class="card-chef chef6">
+            <img class="chef-img" src="./assets/images/chef6.jpg" alt="Chef">
+            <div class="info-chef">
+              <h2 class="nombre-chef">Alejandro Ramírez</h2>
+              <p class="descripcion-chef">Un toque moderno a la tradición con: "Pollo de Soja con Salsa Barbacoa y
+                Pimentón Ahumado".</p>
+            </div>
+          </div>
+      </div>
     </div>
+
     </div>
-    
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
-  </html>
+  </div>
+
+  </div>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
+</html>

@@ -86,20 +86,7 @@ title {
 
 
 /*CHEF*/
-@container (min-width: 768px) {
-  .swiper {
-    width: 95%; 
-  }
-}
-.swiper {
-  display: none;
-  width: 95%;
-  padding: 20px;
-  margin: auto
-}
-.swiper-button-prev, .swiper-button-next {
-  color: var(--WHITE);
-}
+
 .intro-chef {
   margin: auto;
 }
