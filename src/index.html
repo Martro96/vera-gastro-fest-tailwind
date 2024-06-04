@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
+    <!--<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <title>A Mi Vera Battle</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+    
+    <div class="container--page">
+      <include src="./views/nav.html"></include>
+        <div class="intro intro-index">
+          <h3  class="intro--subheader">¿Quién dominará los productos del Jerte?</h3>
+          <div class="intro--descripcion">
+            <p  class="descripcion--p">¡Bienvenidos a la competición culinaria de nuestras XVII fiestas del pueblo de Jaraíz de la Vera!</p>
+            <p  class="descripcion--p">En esta emocionante batalla gastronómica, pondremos a prueba vuestra creatividad y destreza en la cocina utilizando los deliciosos productos del Valle del Jerte, ¡con el pimentón como ingrediente estrella!</p>
+            <p  class="descripcion--p p3">¡Animaos a participar y mostrad vuestro talento culinario! La victoria puede estar a solo una receta de distancia.</p>
+          </div>
+        <div class="info-inscripcion">
+          <p class="inscripcion--p ">La competición tendrá lugar el día 13 de agosto de 2024 en la plaza del pueblo </p>
+          <p class="inscripcion--p">Inscripciones abiertas hasta el 30 de junio de 2024</p>
+        </div>
     </div>
+    </div>
+    
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
-</html>
+  </html>

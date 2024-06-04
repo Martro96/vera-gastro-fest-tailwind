@@ -1,57 +1,602 @@
+@use 'intro' as *;
+@use 'article' as *;
+@import '/node_modules/bootstrap/dist/css/bootstrap.css';
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf')
+}
+@font-face {
+  font-family: 'Lokanova';
+  src: url('../fonts/Lokanova-Std.otf')
+}
+@font-face {
+  font-family: 'Tanker';
+  src: url('../fonts/Tanker-Regular.otf')
+}
+@font-face {
+  font-family: 'Melodrama';
+  src: url('../fonts/Melodrama-Semibold.otf')
+}
+title {
+  display: none;
+}
 * {
   box-sizing: border-box;
+  font-family: 'Archivo', sans-serif;
 }
 
-body {
+/**NAVEGADOR**/
+.current-page {
+  text-decoration: var(--RED) underline 7px;
+  background-color:transparent;
+}
+.abrir__menu,
+.cerrar__menu {
+  display: none;
+}
+.main-nav__list {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
   margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 30px;
+  list-style-type: none;
+  
+}
+.main-nav__link--info {
+  display: flex;
+  gap: 20px;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+.main-nav{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items:center;
+  justify-content: space-between; 
+  width: 100%;
+  margin: auto !important;
+}
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+.main-nav__item{
+  display: flex;
+  margin: auto;
+}
+
+.main-nav__link, .main-nav__link--logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  font-family: 'Tanker', sans-serif;
+  font-size: 1.5rem;
+  color: var(--WHITE);
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.main-nav__link:hover, .main-nav__link--logo:hover {
+  color: var(--RED);
+  text-decoration: underline;
+}
+
+
+/*CHEF*/
+@container (min-width: 768px) {
+  .swiper {
+    width: 95%; 
   }
 }
+.swiper {
+  display: none;
+  width: 95%;
+  padding: 20px;
+  margin: auto
+}
+.swiper-button-prev, .swiper-button-next {
+  color: var(--WHITE);
+}
+.intro-chef {
+  margin: auto;
+}
+.header-chefs {
+  position: relative;
+  z-index: 1;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  font-family: 'Melodrama', sans-serif;
+  font-size: 30px;
+  color: var(--WHITE);
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+.container--page__chefs {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-image: url(../images/foto-principal6.jpg);
+  background-position: top;
+  background-size: cover;
+}
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
+.container-cards-chefs { 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
+  margin: auto;
+}
+.container-cards-chefs-1, .container-cards-chefs-2 {
+  display: flex;
+  gap: 30px;
+}
+.card-chef {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 380px;
+  margin: auto;
+  background-color: var(--WHITE);
+  border-radius: 20px;
+  box-shadow: 0px 7px 10px rgb(0 0 0 / 0.5);
+  transition: 0.5s ease-in-out;
+}
+
+.chef-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    
+  border-radius: 20px;
+}
+.card-chef:hover {
+  transform: translateY(20px);
+}
+.card-chef:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block; 
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(to bottom, rgb(255 255 255 / 0.178), rgb(146 5 5 / 0.402));
+  background-position: center;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 0.5s all;
+}
+.card-chef:hover:before {
+  opacity: 1;
+}
+
+.info-chef {
+  position: absolute;
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 3;
+  padding-bottom: 20px;
+  color: var(--WHITE);
+  text-align: center; 
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.card-chef:hover .info-chef {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  opacity: 1;
+  transform: translateY(0); /* Desplaza el texto hacia abajo */
+}
+
+.nombre-chef {
+  justify-content: flex-start;
+  margin: 0;  
+  margin-bottom: 10px;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: $uoc-corporate;
+  color: var(--WHITE);
+  text-align:center;
+  letter-spacing: 1px;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+}
+.descripcion-chef {
+  margin-top: 8px;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5; 
+  color: var(--WHITE);
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+/*FORM*/
+@container (min-width: 768px) {
+  .container--formulario {
+    width: 100%; 
+  }
+}
+.container--formulario {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-image: url(../images/foto-principal3.jpg);
+  background-position: center; 
+  background-size: cover; 
+}
+
+form {
+  width: 80%;
+  padding: 20px 0px;
+  margin: auto;
+}
+.mb-3 {
+  padding: 20px 0px;
+  font-family: 'Tanker', sans-serif;
+  font-size: 30px;
+  color: var(--RED);
+}
+.form-check-input:checked {
+  background-color: var(--RED);
+  border-color: var(--RED)}
+.cvc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.btn-primary  {
+  margin: 50px 0px;
+  background-color: var(--RED);
+  border-color: var(--BLACK);
+}
+.subir--archivo {
+  display: block;
+}
+
+/*CAMBIOS BOOTSTRAP*/
+.list-group {
+  --bs-list-group-color: none;
+  --bs-list-group-bg: none;
+  --bs-list-group-border-color: none;
+}
+
+/*FOOTER*/
+footer {
+  position: relative;
+  background-color: var(--WHITE);
+}
+footer li {
+  list-style: none;
+}
+.footer--header {
+  padding-top: 30px;
+  font-family: 'Tanker', sans-serif;
   text-align: center;
+}
+.footer--info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.info--1 {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  width: 70%;
+  padding: 50px;
+  margin: auto;
+}
+.custom-popover { /*ESTO LO HAGO ASÍ DE BRUTO PORQUE NO SE ME APLICA SI NO EL CAMBIO EN BOOTSTRAP*/
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-color: var(--BLACK) !important;
+  --bs-popover-header-bg: var(--RED) !important;
+  --bs-popover-header-color: var(--WHITE) !important;
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}
+.btn-secondary {
+  padding: 15px !important;
+  font-family: Archivo, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important; 
+  text-align: center !important;
+  text-decoration: none;
+  letter-spacing: 1.5px !important;
+  border-radius: 15px !important;
+  --bs-btn-color: var(--WHITE) !important;
+  --bs-btn-bg: var(--RED) !important;
+  --bs-btn-border-color: var(--RED) !important;
+  --bs-btn-hover-color: var(--BLACK) !important;
+  --bs-btn-hover-bg: var(--RED) !important;
+  --bs-btn-hover-border-color: var(--RED) !important;
+
+}
+.footer-link {
+  padding: 15px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--WHITE);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  background-color: var(--RED);
+  border-radius: 15px;
+}
+.footer-link:hover {
+  color: var(--BLACK);
+}
+.mapa {
+  width: 100%;
+  height: fit-content;
+}
+.contenedor__ubicacion {
+  z-index: 9;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+}
+.ubiacion__mapa--mapa {
+  width: 100%;
+}
+
+.footer-enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+.main-nav__footer, .nav--list__footer, .footer--rrss {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+
+}
+.link--logo__footer {
+  padding: 15px;
+  margin: 30px;
+  font-family: 'Tanker', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--BLACK);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  border-radius: 15px;
+}
+.link--logo__footer:hover {
+  color: var(--RED);
+  text-decoration: underline var(--RED);
+}
+.nav--list__footer, .footer--links {
+  display: flex;
+}
+
+.rrss--item {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.rrss {
+  color: var(--RED);
+}
+
+/*******FORMATO RESPONSIVE********/
+  /*PHONE*/
+@media only screen and (max-width: 767px) {
+
+  /*NAV*/
+    .main-nav__link {
+      visibility: visible;
+  }
+
+  .main-nav__link--logo {
+      position: relative;
+      top: -10px;
+      z-index: 1;
+      width: 100%;
+      margin: 0;
+      font-size: 24px;
+      text-decoration: none;
+      visibility: visible;
+  }
+
+  .abrir__menu {
+      position: absolute;
+      right: 0;
+      z-index: 3;
+      display: block;
+      margin: 20px;
+      font-size: 2rem;
+      color: var(--WHITE);
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+  }
+
+  .abrir__menu:hover {
+      color: var(--RED);
+  }
+
+  .cerrar__menu {
+      position: absolute;
+      top: 20;
+      right: 20;
+      z-index: 3;
+      display: block;
+      font-size: 2rem;
+      color: var(--WHITE);
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+  }
+
+  .cerrar__menu:hover {
+      color: var(--BLACK);
+  }
+
+  .main-nav__link--info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      width: 200px;
+      padding: 5rem 2rem;
+      margin: 0;
+      visibility: hidden;
+      background-color: var(--RED);
+      border-radius: 15px;
+      box-shadow: 0 0 0 1000vmax rgb(0 0 0 / .5);
+      opacity: 0;
+  }
+
+  .main-nav__item {
+      padding: 0px;
+      margin: 0;
+      font-size: 20px; 
+      text-align: start;
+  }
+  .main-nav__link:hover {
+    color: var(--BLACK);
+  }
+
+  .main-nav--visible {
+      position: fixed;
+      z-index: 10;
+      gap: 20px;
+      visibility: visible;
+      opacity: 1;
+  }
+
+  .main-nav__link--info--visible .cerrar__menu {
+      display: block;
+  }
+
+  /*FOOTER*/
+  .info--1 {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  main-nav__footer, .nav--list__footer, .footer--links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .link--logo__footer {
+    padding: 20px;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  /*CHEF*/
+  .header-chefs{
+    position: relative;
+    z-index: 0;
+    margin-top: 10px;
+  }
+  .swiper {
+    position: relative;
+    z-index: 0;
+    display: block;
+  }
+  .container-cards-chefs {
+    display: none;
+  }
+
+  .card-chef:hover {
+    transform: none;
+  }
+  .card-chef:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block; 
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to bottom, rgb(255 255 255 / 0.178), rgb(146 5 5 / 0.402));
+    background-position: center;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.5s all;
+  }
+  .card-chef:hover:before {
+    opacity: 1;
+  }
+  
+  .info-chef {
+    position: absolute;
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 3;
+    padding-bottom: 20px;
+    color: var(--WHITE);
+    text-align: center; 
+    opacity: 0;
+    transition: 0.5s all;
+  }
+  
+  .card-chef:hover .info-chef {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    opacity: 1;
+    transform: none; /* No desplaza el texto hacia abajo */
+  }
+  
+
+}
+
+/*TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  /*CHEF*/
+  .swiper {
+    display: block;
+  }
+  .container-cards-chefs {
+    display: none;
+  }
+  .header-chefs {
+    margin: 20px auto auto;
+    font-size: 24px;  
+  }
+  .card-chef:hover {
+    transform: none;
+  }
+   /*intro*/
+  :is(.container--formulario, .container--info) {
+    top: 0;
+    height: 60vh;
+    }
+  :where(.container--formulario, .container--info) > .main-nav {
+    margin: 10px auto auto;
+  }
+  
 }
