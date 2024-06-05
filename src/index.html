@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
   <link rel="shortcut icon" href="./assets/images/pimiento-picante.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
   <title>Nuestros chefs</title>
 </head>
 
-<body>
-  <div class="bg-current bg-cover" style="background-image: url('./assets/images/foto-principal6.jpg');">
+<body class="bg-fondo">
+  <div class="relative py-24 sm:py-32 bg-cover bg-center"
+    style="background-image: url('./assets/images/foto-principal6.jpg');">
     <include src="./views/nav.html"></include>
-
-    <!-- tailwind my team TEXTO INRTRO. NO LO SÉ PONER IGUAL QUE ANTES, se me queda negro y a la izquierda y con otro tamaño y fuente-->
-    <div class="py-24 sm:py-32">
-      <div class="mx-auto max-w-2xl">
-        <h1 class="text-center align-middle justify-center m-auto text-white font-melodrama">Aquí os presentamos a los chefs
-          que ya están inscritos en la competición.
-          <br>¡Anímate y participa!
-        </h1>
-      </div>
+    <!-- La capa de color -->
+    <div class="absolute inset-0 bg-bg__capa"></div>
+    <div class="relative mx-auto max-w-2xl">
+    
+      <!-- tailwind my team TEXTO INRTRO. NO LO SÉ PONER IGUAL QUE ANTES, se me queda negro y a la izquierda y con otro tamaño y fuente-->
+      <h1 class="w-3/4 mx-auto mt-12 text-3xl text-center text-white font-melodrama tracking-wide z-10">
+        Aquí os presentamos a los chefs que ya están inscritos en la competición.
+        <br>¡Anímate y participa!
+      </h1>
     </div>
+  </div>
 
-        <!-- tailwind my team CHEFS.-->
-        <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-          <!--CHEF 1-->
-          <li>
-            <div class="flex items-center gap-x-6">
-              <img src="./assets/images/chef.jpg?w=256&h=256&fit=facearea" alt="">
-              <div>
-                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
-                <p class="text-sm font-semibold leading-6 text-indigo-600">Co-Founder / CEO</p>
-              </div>
-            </div>
-          </li>
 
-          <!-- CHEF 2 -->
-
-          <!-- CHEF 3 -->
-
-          <!-- CHEF 4 -->
-
-          <!-- CHEF 5 -->
-
-          <!-- CHEF 6 -->
-
-        </ul>
+  <!-- tailwind my team CHEFS.-->
+  <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+    <!--CHEF 1-->
+    <li>
+      <div class="flex items-center gap-x-6">
+        <img src="./assets/images/chef.jpg" alt="">
+        <div>
+          <h3 class="text-center font-semibold leading-7 tracking-tight font-archivo  text-RED">Rosa María Soto</h3>
+          <p class="text-center font-semibold leading-6 font-archivo text-black">Con su toque fresco y moderno, Rosa María presenta: "Pimientos Rellenos de
+            Quinoa y Verduras al Estilo del Valle".</p>
+        </div>
       </div>
-    </div>
+    </li>
+
+    <!-- CHEF 2 -->
+    <li>
+      <div class="flex items-center gap-x-6">
+        <img src="./assets/images/chef2.jpg" alt="">
+        <div>
+          <h3 class="text-base font-semibold leading-7 tracking-tight font-archivo  text-RED">Mateo García</h3>
+          <p class="text-sm font-semibold leading-6 font-archivo text-black">Para los amantes de lo dulce, Mateo trae: "Cheesecake de Cerezas y Almendras
+            con Base de Dátiles".</p>
+        </div>
+      </div>
+    </li>
+    <!-- CHEF 3 -->
+    <li>
+      <div class="flex items-center gap-x-6">
+        <img src="./assets/images/chef3.jpg" alt="">
+        <div>
+          <h3 class="text-base font-semibold leading-7 tracking-tight font-archivo text-RED">Luisa Hernández</h3>
+          <p class="text-sm font-semibold leading-6 font-archivo text-black">Luces y sabores saludables con: "Ensalada Fresca de Picotas, Espinacas y
+            Quinoa con Aderezo de Mostaza y Sirope de Ágave".</p>
+        </div>
+      </div>
+    </li>
+    <!-- CHEF 4 -->
+    <li>
+      <div class="flex items-center gap-x-6">
+        <img src="./assets/images/chef4.jpg" alt="">
+        <div>
+          <h3 class="text-base font-semibold leading-7 tracking-tight font-archivo text-RED">Carlos Martínez</h3>
+          <p class="text-sm font-semibold leading-6 font-archivo text-black">Un giro contemporáneo en un clásico: "Guiso Vegano de Garbanzos con Verduras
+            y Pimentón Dulce del Valle".</p>
+        </div>
+      </div>
+    </li>
+    <!-- CHEF 5 -->
+    <li>
+      <div class="flex items-center gap-x-6">
+        <img src="./assets/images/chef5.jpg" alt="">
+        <div>
+          <h3 class="text-base font-semibold leading-7 tracking-tight font-archivo text-RED">Isabel Torres</h3>
+          <p class="text-sm font-semibold leading-6 font-archivo text-black">Para los paladares aventureros: "Tarta de Chocolate con Base de Nueces y
+            Sorpresa de Pimentón Dulce".</p>
+        </div>
+      </div>
+    </li>
+    <!-- CHEF 6 -->
+    <li>
+      <div class="flex items-center gap-x-6">
+        <img src="./assets/images/chef6.jpg" alt="">
+        <div>
+          <h3 class="text-base font-semibold leading-7 tracking-tight font-archivo text-RED">Alejandro Ramírez</h3>
+          <p class="text-sm font-semibold leading-6 font-archivo text-black">Un toque moderno a la tradición con: "Pollo de Soja con Salsa Barbacoa y
+            Pimentón Ahumado".</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+  </div>
 
 
   </div>
