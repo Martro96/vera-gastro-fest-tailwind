@@ -12,53 +12,139 @@
 <body>
   <div class="container mx-auto p-4 container--page container--page__chefs">
     <include src="./views/nav.html"></include>
-    <div>
-      <h1 class="text-3xl font-bold text-center my-4 font-melodrama header-chefs">Aquí os presentamos a los chefs que ya están inscritos en la competición.
-        <br>¡Anímate y participa!
-      </h1>
+
+
+    <!-- tailwind my team YO CREO QUE SE QUEDA IGUAL PORQUE MANTENGO LA CLASE DE HEADER-CHEFS-->
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+        <div class="max-w-2xl">
+          <h1 class="text-3xl font-bold text-center my-4 font-melodrama header-chefs">Aquí os presentamos a los chefs
+            que ya están inscritos en la competición.
+            <br>¡Anímate y participa!
+          </h1>
+        </div>
+
+        <!--lista de chefs-->
+        <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+          <!--chef 1-->
+          <li>
+            <div class="flex items-center gap-x-6">
+              <!--La imagen ocupa el 100%, no es como el preview-->
+              <img class="h-16 w-16 rounded-full" src="./assets/images/chef.jpg" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-white-900">Rosa María Soto</h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">Con su toque fresco y moderno, Rosa María
+                  presenta: "Pimientos Rellenos de
+                  Quinoa y Verduras al Estilo del Valle".</p>
+              </div>
+            </div>
+          </li>
+          <!--chef 2-->
+          <li>
+            <div class="flex items-center gap-x-6">
+              <!--La imagen ocupa el 100%, no es como el preview-->
+              <img class="h-16 w-16 rounded-full" src="./assets/images/chef2.jpg" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-white-900">Rosa María Soto</h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">Con su toque fresco y moderno, Rosa María
+                  presenta: "Pimientos Rellenos de
+                  Quinoa y Verduras al Estilo del Valle".</p>
+              </div>
+            </div>
+          </li>
+          <!--chef 3-->
+          <li>
+            <div class="flex items-center gap-x-6">
+              <!--La imagen ocupa el 100%, no es como el preview-->
+              <img class="h-16 w-16 rounded-full" src="./assets/images/chef3.jpg" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-white-900">Rosa María Soto</h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">Con su toque fresco y moderno, Rosa María
+                  presenta: "Pimientos Rellenos de
+                  Quinoa y Verduras al Estilo del Valle".</p>
+              </div>
+            </div>
+          </li>
+          <!--chef 4-->
+          <li>
+            <div class="flex items-center gap-x-6">
+              <!--La imagen ocupa el 100%, no es como el preview-->
+              <img class="h-16 w-16 rounded-full" src="./assets/images/chef4.jpg" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-white-900">Rosa María Soto</h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">Con su toque fresco y moderno, Rosa María
+                  presenta: "Pimientos Rellenos de
+                  Quinoa y Verduras al Estilo del Valle".</p>
+              </div>
+            </div>
+          </li>
+          <!--chef 5-->
+          <li>
+            <div class="flex items-center gap-x-6">
+              <!--La imagen ocupa el 100%, no es como el preview-->
+              <img class="h-16 w-16 rounded-full" src="./assets/images/chef5.jpg" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-white-900">Rosa María Soto</h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">Con su toque fresco y moderno, Rosa María
+                  presenta: "Pimientos Rellenos de
+                  Quinoa y Verduras al Estilo del Valle".</p>
+              </div>
+            </div>
+          </li>
+          <!--chef 6-->
+          <li>
+            <div class="flex items-center gap-x-6">
+              <!--La imagen ocupa el 100%, no es como el preview-->
+              <img class="h-16 w-16 rounded-full" src="./assets/images/chef6.jpg" alt="">
+              <div>
+                <h3 class="text-base font-semibold leading-7 tracking-tight text-white-900">Rosa María Soto</h3>
+                <p class="text-sm font-semibold leading-6 text-indigo-600">Con su toque fresco y moderno, Rosa María
+                  presenta: "Pimientos Rellenos de
+                  Quinoa y Verduras al Estilo del Valle".</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="intro-chef mx-auto">
+
+
+    <!--INTRO CHEFS CÓDIGO PEC 2
+    <div class="intro-chef">
+
       <div class="container-cards-chefs">
-        <!--CHEF 1-->
-        <div class="container-cards-chefs-1 flex flex-wrap justify-center gap-8">
-          <div
-            class="card-chef chef1 bg-white rounded-lg shadow-md overflow-hidden relative flex items-center justify-center w-[280px] h-[380px] mx-auto transition-transform duration-500">
-            <img class="chef-img w-full h-48 object-cover absolute top-0 left-0 rounded-lg"
-              src="./assets/images/chef.jpg" alt="Chef">
-            <div
-              class="info-chef absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/30 to-red-500/60 opacity-0 transition-opacity duration-500">
-              <h2 class="nombre-chef text-xl font-semibold">Rosa María Soto</h2>
-              <p class="descripcion-chef text-gray-600">Con su toque fresco y moderno, Rosa María presenta: "Pimientos
-                Rellenos de Quinoa y Verduras al Estilo del Valle".</p>
+        <div class="container-cards-chefs-1">
+          <div class="card-chef chef1">
+            <img class="chef-img" src="./assets/images/chef.jpg" alt="Chef">
+            <div class="info-chef">
+              <h2 class="nombre-chef">Rosa María Soto</h2>
+              <p class="descripcion-chef">Con su toque fresco y moderno, Rosa María presenta: "Pimientos Rellenos de
+                Quinoa y Verduras al Estilo del Valle".</p>
             </div>
           </div>
 
-        <!--CHEF 2 -->
-        <div class="card-chef chef2">
-          <img class="chef-img" src="./assets/images/chef2.jpg" alt="Chef">
-          <div class="info-chef">
-            <h2 class="nombre-chef">Mateo García</h2>
-            <p class="descripcion-chef">Para los amantes de lo dulce, Mateo trae: "Cheesecake de Cerezas y
-              Almendras con
-              Base de Dátiles".</p>
+          <div class="card-chef chef2">
+            <img class="chef-img" src="./assets/images/chef2.jpg" alt="Chef">
+            <div class="info-chef">
+              <h2 class="nombre-chef">Mateo García</h2>
+              <p class="descripcion-chef">Para los amantes de lo dulce, Mateo trae: "Cheesecake de Cerezas y
+                Almendras con
+                Base de Dátiles".</p>
+            </div>
+          </div>
+
+          <div class="card-chef chef3">
+            <img class="chef-img" src="./assets/images/chef3.jpg" alt="Chef">
+            <div class="info-chef">
+              <h2 class="nombre-chef">Luisa Hernández</h2>
+              <p class="descripcion-chef">Luces y sabores saludables con: "Ensalada Fresca de Picotas, Espinacas y
+                Quinoa
+                con Aderezo de Mostaza y Sirope de Ágave".</p>
+            </div>
           </div>
         </div>
 
-        <!--CHEF 3 -->
-        <div class="card-chef chef3">
-          <img class="chef-img" src="./assets/images/chef3.jpg" alt="Chef">
-          <div class="info-chef">
-            <h2 class="nombre-chef">Luisa Hernández</h2>
-            <p class="descripcion-chef">Luces y sabores saludables con: "Ensalada Fresca de Picotas, Espinacas y
-              Quinoa
-              con Aderezo de Mostaza y Sirope de Ágave".</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="container-cards-chefs-2">
-
-        <!--CHEF 4 -->
+        <div class="container-cards-chefs-2">
           <div class="card-chef chef4">
             <img class="chef-img" src="./assets/images/chef4.jpg" alt="Chef">
             <div class="info-chef">
@@ -69,7 +155,6 @@
             </div>
           </div>
 
-          <!--CHEF 5 -->
           <div class="card-chef chef5">
             <img class="chef-img" src="./assets/images/chef5.jpg" alt="Chef">
             <div class="info-chef">
@@ -79,7 +164,6 @@
             </div>
           </div>
 
-          <!--CHEF 6 -->
           <div class="card-chef chef6">
             <img class="chef-img" src="./assets/images/chef6.jpg" alt="Chef">
             <div class="info-chef">
@@ -88,11 +172,11 @@
                 Pimentón Ahumado".</p>
             </div>
           </div>
+        </div>
+
       </div>
     </div>
-
-    </div>
-  </div>
+      -->
 
   </div>
   <include src="./views/footer.html"></include>

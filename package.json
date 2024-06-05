@@ -9,6 +9,7 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
+    "build:css": "sass --watch ./assets/styles/main.scss:./assets/styles/output.css & postcss ./assets/styles/output.css --watch --output ./assets/styles/output.min.css",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "web": "dist/index.html",
@@ -40,9 +41,11 @@
     "npm-run-all": "^4.1.5",
     "parcel": "^2.11.0",
     "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
     "postcss-preset-env": "^9.1.1",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.1",
+    "sass": "^1.77.4",
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.3"
   },
