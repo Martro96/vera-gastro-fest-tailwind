@@ -3,6 +3,11 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: ['./*.html', './assets/scripts/*.js'],
+  breakPoints: {
+    "sm": "@media(min-width:750px)",
+    "md": "@media(min-width:1000px)",
+    "lg": "@media(min-width:1200px)"
+  },
   theme: {
     extend: {
       fontFamily: {
