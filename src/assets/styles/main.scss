@@ -1,40 +1,26 @@
 @tailwind base;
 @tailwind components;
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
-
-/**
- * Import variables
- */
 
 @import "variables";
+@font-face {
+  font-family: 'Melodrama';
+  src: url('../fonts/Melodrama-Semibold.otf');
+}
+@font-face {
+    font-family: 'Archivo';
+    src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf')
+  }
+  @font-face {
+    font-family: 'Lokanova';
+    src: url('../fonts/Lokanova-Std.otf')
+  }
+  @font-face {
+    font-family: 'Tanker';
+    src: url('../fonts/Tanker-Regular.otf')
+  }
 
-/**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- * see commented examples below
- */
-
- //Import Bootstrap
- //@import "bootstrap/scss/bootstrap";
-
-//Import Font Awesome
-@import 'npm:@fortawesome/fontawesome-free/css/all.css';
-
-//Import Swiper
-//@import "~swiper/swiper";
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
-
+// Importar otros SCSS
 @import "layouts/home";
-//@import "layouts/article";
 @import "layouts/intro";
 
-/**
- * Do NOT include anything else in this file!
- */
- @tailwind utilities;
+@tailwind utilities;

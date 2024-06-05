@@ -1,33 +1,28 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: ['./*.html', './assets/scripts/*.js'],
   theme: {
     extend: {
       fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         melodrama: ['Melodrama', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'], 
-        Tanker: ['Tanker', 'sans-serif'],
+        tanker: ['Tanker', 'sans-serif'],
       },
-    },
-    colors: {
-      white: '#ffffff',
-      gray: {
-        600: '#4B5563',
-        800: '#1F2937',
+      colors: {
+        RED: 'rgb(199, 40, 51)',
+        fondo: 'rgb(255, 255, 255)',
+        bg__capa: 'rgb(0, 0, 0, 0.6)',  
+        bg__capa2: 'rgb(0, 0, 0, 0.8)',
       },
-      red: {
-        500: '#EF4444',
+      spacing: {
+        '4.5': '1.125rem',
       },
-    },
-    spacing: {
-      '4.5': '1.125rem',
     },
   },
   plugins: [
-    {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  ],
+    require('@tailwindcss/forms'),
+    ],
 };
-
