@@ -285,31 +285,31 @@ footer li {
   padding: 50px;
   margin: auto;
 }
-.custom-popover { /*ESTO LO HAGO ASÍ DE BRUTO PORQUE NO SE ME APLICA SI NO EL CAMBIO EN BOOTSTRAP*/
-  --bs-popover-max-width: 200px;
-  --bs-popover-border-color: var(--BLACK) !important;
-  --bs-popover-header-bg: var(--RED) !important;
-  --bs-popover-header-color: var(--WHITE) !important;
-  --bs-popover-body-padding-x: 1rem;
-  --bs-popover-body-padding-y: .5rem;
-}
-.btn-secondary {
-  padding: 15px !important;
-  font-family: Archivo, sans-serif !important;
-  font-size: 20px !important;
-  font-weight: 600 !important; 
-  text-align: center !important;
-  text-decoration: none;
-  letter-spacing: 1.5px !important;
-  border-radius: 15px !important;
-  --bs-btn-color: var(--WHITE) !important;
-  --bs-btn-bg: var(--RED) !important;
-  --bs-btn-border-color: var(--RED) !important;
-  --bs-btn-hover-color: var(--BLACK) !important;
-  --bs-btn-hover-bg: var(--RED) !important;
-  --bs-btn-hover-border-color: var(--RED) !important;
+// .custom-popover { 
+//   --bs-popover-max-width: 200px;
+//   --bs-popover-border-color: var(--BLACK) !important;
+//   --bs-popover-header-bg: var(--RED) !important;
+//   --bs-popover-header-color: var(--WHITE) !important;
+//   --bs-popover-body-padding-x: 1rem;
+//   --bs-popover-body-padding-y: .5rem;
+// }
+// .btn-secondary {
+//   padding: 15px !important;
+//   font-family: Archivo, sans-serif !important;
+//   font-size: 20px !important;
+//   font-weight: 600 !important; 
+//   text-align: center !important;
+//   text-decoration: none;
+//   letter-spacing: 1.5px !important;
+//   border-radius: 15px !important;
+//   --bs-btn-color: var(--WHITE) !important;
+//   --bs-btn-bg: var(--RED) !important;
+//   --bs-btn-border-color: var(--RED) !important;
+//   --bs-btn-hover-color: var(--BLACK) !important;
+//   --bs-btn-hover-bg: var(--RED) !important;
+//   --bs-btn-hover-border-color: var(--RED) !important;
 
-}
+// }
 .footer-link {
   padding: 15px;
   font-family: 'Archivo', sans-serif;

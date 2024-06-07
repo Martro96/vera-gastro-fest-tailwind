@@ -23,4 +23,17 @@
 @import "layouts/home";
 @import "layouts/intro";
 
+@layer components {
+  .btn-secondary {
+    @apply py-2 px-5 bg-RED text-white font-semibold rounded-full shadow-md hover:bg-black focus:outline-none focus:ring focus:bg-RED;
+  }
+  .card-chef {
+    @apply relative flex align-middle justify-center w-280px h-380px m-auto bg-white rounded-2xl shadow-md
+  }
+  .chef-img {
+    @apply absolute top-0 left-0 w-full h-full object-cover rounded-3xl
+  }
+
+}
+
 @tailwind utilities;
