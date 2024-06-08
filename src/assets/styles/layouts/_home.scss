@@ -209,13 +209,13 @@ title {
   letter-spacing: 1px;
 }
 
-/*FORM*/
+/*FORM
 @container (min-width: 768px) {
   .container--formulario {
     width: 100%; 
   }
 }
-.container--formulario {
+*/.container--formulario {
   position: relative;
   width: 100%;
   height: fit-content;
@@ -252,12 +252,12 @@ form {
   display: block;
 }
 
-/*CAMBIOS BOOTSTRAP*/
+/*CAMBIOS BOOTSTRAP*
 .list-group {
   --bs-list-group-color: none;
   --bs-list-group-bg: none;
   --bs-list-group-border-color: none;
-}
+}*/
 
 /*FOOTER*/
 footer {
