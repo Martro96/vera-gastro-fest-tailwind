@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./*.html', './assets/scripts/*.js'],
+  content: ['./src/**/*.{html,js}'],
   theme: {
     screens: {
       'sm': '640px',
@@ -22,13 +22,13 @@ module.exports = {
     extend: {
       fontFamily: {
         melodrama: ['Melodrama', 'sans-serif'],
-        archivo: ['Archivo', 'sans-serif'], 
+        archivo: ['Archivo', 'sans-serif'],
         tanker: ['Tanker', 'sans-serif'],
       },
       colors: {
         RED: 'rgb(199, 40, 51)',
         fondo: 'rgb(255, 255, 255)',
-        bg__capa: 'rgb(0, 0, 0, 0.6)',  
+        bg__capa: 'rgb(0, 0, 0, 0.6)',
         bg__capa2: 'rgb(0, 0, 0, 0.8)',
       },
       spacing: {
@@ -38,5 +38,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    ],
+  ],
 };

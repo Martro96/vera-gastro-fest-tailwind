@@ -10,358 +10,187 @@
 </head>
 
 <body>
-  <div class="container--page container--formulario">
+  <div class="relative py-5 sm:py-16 bg-cover bg-center" style="background-image: url('./assets/images/foto-principal3.jpg');">
     <include src="./views/nav.html"></include>
-    <div class="bg-container bg-container__info">
-      <div class="intro-article">
-        <h1 class="article-header">
-          Concurso Culinario del Valle del Jerte.
-        </h1>
-        <h3 class="article-subheader">
-          ¡Rellena el Formulario y participa!
-        </h3>
-      </div>
+    
+    <!-- La capa de color -->
+    <div class="absolute inset-0 bg-bg__capa"></div>
+    <div class="relative bg-container bg-container__info">
+        <div class="intro-article">
+            <h1 class="text-center text-white font-melodrama tracking-wide z-10 text-3xl p-5">
+                Concurso Culinario del Valle del Jerte.
+            </h1>
+            <h3 class="text-center text-white font-melodrama tracking-wide z-10 text-3xl p-5">
+                ¡Rellena el Formulario y participa!
+            </h3>
+        </div>
     </div>
   </div>
 
-  <form class="needs-validation" novalidate>
-    <h4 class="mb-3">Información participante</h4>
-    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
-      <div class="col-span-1">
-        <label for="firstName" class="block text-sm font-medium text-gray-700">Nombre</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm  focus:bg-red-600 focus:border-red-600 sm:text-sm" id="firstName" placeholder="" value="" required>
-        <div class="invalid-feedback text-red-600">
-          Se necesita un nombre válido.
+  <div class="container bg-white">
+    <form class="w-11/12 m-auto py-10 px-10 ">
+      
+      <h4 class="font-tanker text-RED text-3xl size-auto py-8">Información participante</h4>
+      <div class="grid-cols-2 gap-3 md:grid-cols-2 sm:grid-cols-1">
+        <div class="col-span-1">
+          <label for="firstName" class="block text-sm font-medium text-gray-700">Nombre</label>
+          <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="firstName" placeholder="" value="" required>
+          <p class="text-red-600 hidden">Se necesita un nombre válido.</p>
+        </div>
+        <div class="col-span-1">
+          <label for="lastName" class="block text-sm font-medium text-gray-700">Apellidos</label>
+          <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="lastName" placeholder="" value="" required>
+          <div class="text-red-600 hidden">
+            Se necesita un apellido válido.
+          </div>
+        </div>
+        <div class="col-span-1 sm:col-span-2">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-gray-500"></span></label>
+          <input type="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="email" placeholder="hola@example.com">
+          <div class="text-red-600 hidden">
+            Por favor, introduce una dirección de correo electrónico válida.
+          </div>
+        </div>
+        <div class="col-span-1 sm:col-span-2">
+          <label for="address" class="block text-sm font-medium text-gray-700">Dirección</label>
+          <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="address" placeholder="Calle y número" required>
+          <div class=" text-red-600 hidden">
+            Por favor, introduce una dirección válida.
+          </div>
+        </div>
+        <div class="col-span-1 sm:col-span-2">
+          <label for="address2" class="block text-sm font-medium text-gray-700">Dirección 2 <span class="text-gray-500">(Optional)</span></label>
+          <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="address2" placeholder="Piso, escalera">
+        </div>
+        <div class="col-span-1 sm:col-span-1 md:col-span-5">
+          <label for="country" class="block text-sm font-medium text-gray-700">País</label>
+          <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="country" required>
+            <option value="">Elige el país</option>
+            <option>España</option>
+            <option>Portugal</option>
+          </select>
+          <div class="text-red-600 hidden">
+            Por favor, introduce un país válido.
+          </div>
+        </div>
+        <div class="col-span-1 sm:col-span-1 md:col-span-4">
+          <label for="state" class="block text-sm font-medium text-gray-700">Comunidad Autónoma</label>
+          <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="state" required>
+            <option value="">Elige tu Comunidad Autónoma</option>
+            <option value="Andalucía">Andalucía</option>
+            <option value="Aragón">Aragón</option>
+            <option value="Asturias">Asturias</option>
+            <option value="Baleares">Baleares</option>
+            <option value="Canarias">Canarias</option>
+            <option value="Cantabria">Cantabria</option>
+            <option value="Castilla y León">Castilla y León</option>
+            <option value="Castilla-La Mancha">Castilla-La Mancha</option>
+            <option value="Cataluña">Cataluña</option>
+            <option value="Comunidad Valenciana">Comunidad Valenciana</option>
+            <option value="Extremadura">Extremadura</option>
+            <option value="Galicia">Galicia</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Murcia">Murcia</option>
+            <option value="Navarra">Navarra</option>
+            <option value="País Vasco">País Vasco</option>
+            <option value="Ceuta">Ceuta</option>
+            <option value="Melilla">Melilla</option>
+          </select>
+          <div class="text-red-600 hidden">
+            Por favor, introduce una Comunidad Autónoma válida.
+          </div>
+        </div>
+        <div class="col-span-1 sm:col-span-1 md:col-span-3">
+          <label for="zip" class="block text-sm font-medium text-gray-700">CP</label>
+          <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="zip" placeholder="12345" required>
+          <div class="text-red-600 hidden">
+            Por favor, introduce un CP válido.
+          </div>
         </div>
       </div>
-  
-      <div class="col-span-1">
-        <label for="lastName" class="block text-sm font-medium text-gray-700">Apellidos</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="lastName" placeholder="" value="" required>
-        <div class="invalid-feedback text-red-600">
-          Se necesita un apellido válido.
-        </div>
-      </div>
-  
-      <div class="col-span-1 sm:col-span-2">
-        <label for="email" class="block text-sm font-medium text-gray-700">Email <span class="text-gray-500"></span></label>
-        <input type="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="email" placeholder="hola@example.com">
-        <div class="invalid-feedback text-red-600">
-          Por favor, introduce una dirección de correo electrónico válida.
-        </div>
-      </div>
-  
-      <div class="col-span-1 sm:col-span-2">
-        <label for="address" class="block text-sm font-medium text-gray-700">Dirección</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="address" placeholder="Calle y número" required>
-        <div class="invalid-feedback text-red-600">
-          Por favor, introduce una dirección válida.
-        </div>
-      </div>
-  
-      <div class="col-span-1 sm:col-span-2">
-        <label for="address2" class="block text-sm font-medium text-gray-700">Dirección 2 <span class="text-gray-500">(Optional)</span></label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="address2" placeholder="Piso, escalera">
-      </div>
-  
-      <div class="col-span-1 sm:col-span-1 md:col-span-5">
-        <label for="country" class="block text-sm font-medium text-gray-700">País</label>
-        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm  focus:bg-red-600 focus:border-red-600 sm:text-sm" id="country" required>
-          <option value="">Elige el país</option>
-          <option>España</option>
-          <option>Portugal</option>
+
+      <h4 class="font-tanker text-RED text-3xl size-auto py-8">Categoría y Receta</h4>
+      <div class="mb-3">
+        <label for="exampleFormControlSelect1" class="block text-sm font-medium text-gray-700">Elige la categoría en la que quieres participar</label>
+        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="exampleFormControlSelect1">
+          <option>Categoría Tradicional</option>
+          <option>Categoría Creatividad Culinary</option>
+          <option>Categoría Espíritu del Concurso</option>
         </select>
-        <div class="invalid-feedback text-red-600">
-          Por favor, introduce un país válido.
-        </div>
       </div>
-  
-      <div class="col-span-1 sm:col-span-1 md:col-span-4">
-        <label for="state" class="block text-sm font-medium text-gray-700">Comunidad Autónoma</label>
-        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="state" required>
-          <option value="">Elige tu Comunidad Autónoma</option>
-          <option value="Andalucía">Andalucía</option>
-          <option value="Aragón">Aragón</option>
-          <option value="Asturias">Asturias</option>
-          <option value="Baleares">Baleares</option>
-          <option value="Canarias">Canarias</option>
-          <option value="Cantabria">Cantabria</option>
-          <option value="Castilla y León">Castilla y León</option>
-          <option value="Castilla-La Mancha">Castilla-La Mancha</option>
-          <option value="Cataluña">Cataluña</option>
-          <option value="Comunidad Valenciana">Comunidad Valenciana</option>
-          <option value="Extremadura">Extremadura</option>
-          <option value="Galicia">Galicia</option>
-          <option value="La Rioja">La Rioja</option>
-          <option value="Madrid">Madrid</option>
-          <option value="Murcia">Murcia</option>
-          <option value="Navarra">Navarra</option>
-          <option value="País Vasco">País Vasco</option>
-          <option value="Ceuta">Ceuta</option>
-          <option value="Melilla">Melilla</option>
-        </select>
-        <div class="invalid-feedback text-red-600">
-          Por favor, introduce una Comunidad Autónoma válida.
-        </div>
+      <div class="mb-3">
+        <label for="nombre-Receta" class="block text-sm font-medium text-gray-700">Nombre de tu receta</label>
+        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-smfocus:bg-white focus:border-red-600 sm:text-sm" placeholder="Nombre de tu creación culinaria">
       </div>
-  
-      <div class="col-span-1 sm:col-span-1 md:col-span-3">
-        <label for="zip" class="block text-sm font-medium text-gray-700">CP</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="zip" placeholder="12345" required>
-        <div class="invalid-feedback text-red-600">
-          Por favor, introduce un CP válido.
-        </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="block text-sm font-medium text-gray-700">Describe tu receta</label>
+        <textarea class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-red-600 sm:text-sm" id="exampleFormControlTextarea2" rows="3"></textarea>
       </div>
-    </div>
-  
-    <h4 class="mb-3">Categoría y Receta</h4>
-    <div class="mb-3">
-      <label for="exampleFormControlSelect1" class="block text-sm font-medium text-gray-700">Elige la categoría en la que quieres participar</label>
-      <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="exampleFormControlSelect1">
-        <option>Categoría Tradicional</option>
-        <option>Categoría Creatividad Culinary</option>
-        <option>Categoría Espíritu del Concurso</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <label for="nombre-Receta" class="block text-sm font-medium text-gray-700">Nombre de tu receta</label>
-      <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" placeholder="Nombre de tu creación culinaria">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="block text-sm font-medium text-gray-700">Describe tu receta</label>
-      <textarea class="mt-1 block w-full border-gray-300 rounded-md shadow-sm  focus:bg-red-600 focus:border-red-600 sm:text-sm" id="exampleFormControlTextarea2" rows="3"></textarea>
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlFile1" class="block text-sm font-medium text-gray-700">Sube una foto de tu receta</label>
-      <input type="file" class="mt-1 block w-full text-sm text-gray-900 border-gray-300 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" id="exampleFormControlFile1">
-    </div>
-  
-    <h4 class="mb-3">Pago</h4>
-  
-    <div class="my-3">
-      <div class="form-check">
-        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-        <label class="form-check-label" for="credit">Tarjeta de Crédito</label>
+      <div class="mb-3">
+        <label for="exampleFormControlFile1" class="block text-sm font-medium text-gray-700">Sube una foto de tu receta</label>
+        <input type="file" class="mt-1 block w-full text-sm text-gray-900 border-gray-300 rounded-lg cursor-pointer focus:bg-white focus:border-red-600" id="exampleFormControlFile1">
+        <p class="mt-1 text-sm text-gray-600" id="file_input_help">PNG o JPG (MAX. 2MB).</p>
       </div>
       <div class="form-check">
-        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-        <label class="form-check-label" for="debit">Tarjeta de Débito</label>
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Aceptar Términos y Condiciones</label>
       </div>
-      <div class="form-check">
-        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-        <label class="form-check-label" for="paypal">PayPal</label>
-      </div>
-    </div>
+      <h4 class="font-tanker text-RED text-3xl size-auto py-8">Pago</h4>
+        <div class="my-3">
+          <div class="form-check">
+            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+            <label class="form-check-label" for="credit">Tarjeta de Crédito</label>
+          </div>
+          <div class="form-check">
+            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label class="form-check-label" for="debit">Tarjeta de Débito</label>
+          </div>
+          <div class="form-check">
+            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+            <label class="form-check-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <div class="col-span-1 md:col-span-2">
+            <label for="cc-name" class="block text-sm font-medium text-gray-700">Nombre de la tarjeta</label>
+            <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-black sm:text-sm" id="cc-name" placeholder="" required>
+            <small class="text-gray-500">Nombre completo tal y como aparece en la tarjeta</small>
+            <div class="text-red-600 hidden">
+              Nombre de la tarjeta requerido
+            </div>
+          </div>
+
+          <div class="col-span-1 md:col-span-2">
+            <label for="cc-number" class="block text-sm font-medium text-gray-700">Número de la tarjeta</label>
+            <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-black sm:text-sm" id="cc-number" placeholder="4111 1111 1111 1111" required>
+            <div class="text-red-600 hidden">
+              Número de la tarjeta requerido
+            </div>
+          </div>
+
+          <div class="col-span-1 md:col-span-1">
+            <label for="cc-expiration" class="block text-sm font-medium text-gray-700">Fecha de caducidad</label>
+            <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-black sm:text-sm" id="cc-expiration" placeholder="xx/xx" required>
+            <div class=" text-red-600 hidden">
+              Fecha de caducidad de la tarjeta requerida
+            </div>
+          </div>
+
+          <div class="col-span-1 md:col-span-1">
+            <label for="cc-cvv" class="block text-sm font-medium text-gray-700">CVC</label>
+            <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-white focus:border-black sm:text-sm" id="cc-cvv" placeholder="123" required>
+            <div class=" text-red-600 hidden">
+              CVC requerido
+            </div>
+          </div>
+</div>
+
+      <button class="w-full bg-red-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-red-700 focus:outline-none focus:bg-red-900 mt-3 m-y-5" type="submit">Enviar</button>
+    </form>
+  </div>
   
-    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
-      <div class="col-span-1 md:col-span-2">
-        <label for="cc-name" class="block text-sm font-medium text-gray-700">Nombre de la tarjeta</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="cc-name" placeholder="" required>
-        <small class="text-gray-500">Nombre completo tal y como aparece en la tarjeta</small>
-        <div class="invalid-feedback text-red-600">
-          Nombre de la tarjeta requerido
-        </div>
-      </div>
-  
-      <div class="col-span-1 md:col-span-2">
-        <label for="cc-number" class="block text-sm font-medium text-gray-700">Número de la tarjeta</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:bg-red-600 focus:border-red-600 sm:text-sm" id="cc-number" placeholder="4111 1111 1111 1111" required>
-        <div class="invalid-feedback text-red-600">
-          Número de la tarjeta requerido
-        </div>
-      </div>
-  
-      <div class="col-span-1">
-        <label for="cc-expiration" class="block text-sm font-medium text-gray-700">Fecha de caducidad</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm  focus:bg-red-600 focus:border-red-600 sm:text-sm" id="cc-expiration" placeholder="xx/xx" required>
-        <div class="invalid-feedback text-red-600">
-          Fecha de caducidad de la tarjeta requerida
-        </div>
-      </div>
-  
-      <div class="col-span-1">
-        <label for="cc-cvv" class="block text-sm font-medium text-gray-700">CVC</label>
-        <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm  focus:bg-red-600 focus:border-red-600 sm:text-sm" id="cc-cvv" placeholder="123" required>
-        <div class="invalid-feedback text-red-600">
-          CVC requerido
-        </div>
-      </div>
-    </div>
-  
-    <button class="w-full mt-5 px-4 py-2 bg-red-400 text-black text-lg font-medium rounded-md hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:border-red-600" type="submit">Continuar con el pago</button>
-  </form>
-  
-
-
-
-  <!-- <form class="needs-validation" novalidate>
-    <h4 class="mb-3">Información participante</h4>
-    <div class="row g-3">
-      <div class="col-sm-6">
-        <label for="firstName" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-        <div class="invalid-feedback">
-          Se necesita un nombre válido.
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <label for="lastName" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-        <div class="invalid-feedback">
-          Se necesita un apellido válido.
-        </div>
-      </div>
-
-
-      <div class="col-12">
-        <label for="email" class="form-label">Email <span class="text-body-secondary"></span></label>
-        <input type="email" class="form-control" id="email" placeholder="hola@example.com">
-        <div class="invalid-feedback">
-          Por favor, introduce una dirección de correo electrónico válida.
-        </div>
-      </div>
-
-      <div class="col-12">
-        <label for="address" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="address" placeholder="Calle y número" required>
-        <div class="invalid-feedback">
-          Por favor, introduce una dirección válida.
-        </div>
-      </div>
-
-      <div class="col-12">
-        <label for="address2" class="form-label">Dirección 2 <span class="text-body-secondary">(Optional)</span></label>
-        <input type="text" class="form-control" id="address2" placeholder="Piso, escalera">
-      </div>
-
-      <div class="col-md-5">
-        <label for="country" class="form-label">País</label>
-        <select class="form-select" id="country" required>
-          <option value="">Elige el país</option>
-          <option>España</option>
-          <option>Portugal</option>
-        </select>
-        <div class="invalid-feedback">
-          Por favor, introduce un país válido.
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <label for="state" class="form-label">Comunidad Autónoma</label>
-        <select class="form-select" id="state" required>
-          <option value="">Elige tu Comunidad Autónoma</option>
-          <option value="Andalucía">Andalucía</option>
-          <option value="Aragón">Aragón</option>
-          <option value="Asturias">Asturias</option>
-          <option value="Baleares">Baleares</option>
-          <option value="Canarias">Canarias</option>
-          <option value="Cantabria">Cantabria</option>
-          <option value="Castilla y León">Castilla y León</option>
-          <option value="Castilla-La Mancha">Castilla-La Mancha</option>
-          <option value="Cataluña">Cataluña</option>
-          <option value="Comunidad Valenciana">Comunidad Valenciana</option>
-          <option value="Extremadura">Extremadura</option>
-          <option value="Galicia">Galicia</option>
-          <option value="La Rioja">La Rioja</option>
-          <option value="Madrid">Madrid</option>
-          <option value="Murcia">Murcia</option>
-          <option value="Navarra">Navarra</option>
-          <option value="País Vasco">País Vasco</option>
-          <option value="Ceuta">Ceuta</option>
-          <option value="Melilla">Melilla</option>
-        </select>
-        <div class="invalid-feedback">
-          Por favor, introduce una Comunidad Autónoma válida.
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <label for="zip" class="form-label">CP</label>
-        <input type="text" class="form-control" id="zip" placeholder="12345" required>
-        <div class="invalid-feedback">
-          Por favor, introduce un CP válido.
-        </div>
-      </div>
-    </div>
-
-    <h4 class="mb-3">Categoría y Receta</h4>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Elige la categoría en la que quieres participar</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>Categoría Tradicional</option>
-        <option>Categoría Creatividad Culinary</option>
-        <option>Categoría Espíritu del Concurso</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="nombre-Receta">Nombre de tu receta</label>
-      <input type="text" class="form-control" placeholder="Nombre de tu creación culinaria">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Describe tu receta</label>
-      <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
-    </div>
-    <div class="form-group subir--archivo">
-      <label for="exampleFormControlFile1">Sube una foto de tu receta</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-    </div>
-
-    <h4 class="mb-3">Pago</h4>
-
-    <div class="my-3">
-      <div class="form-check">
-        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-        <label class="form-check-label" for="credit">Tarjeta de Crédito</label>
-      </div>
-      <div class="form-check">
-        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-        <label class="form-check-label" for="debit">Tarjeta de Débito</label>
-      </div>
-      <div class="form-check">
-        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-        <label class="form-check-label" for="paypal">PayPal</label>
-      </div>
-    </div>
-
-    <div class="row gy-3">
-      <div class="col-md-6">
-        <label for="cc-name" class="form-label">Nombre de la tarjeta</label>
-        <input type="text" class="form-control" id="cc-name" placeholder="" required>
-        <small class="text-body-secondary">Nombre completo tal y como aparece en la tarjeta</small>
-        <div class="invalid-feedback">
-          Nombre de la tarjeta requerido
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <label for="cc-number" class="form-label">Número de la tarjeta</label>
-        <input type="text" class="form-control" id="cc-number" placeholder="4111 1111 1111 1111" required>
-        <div class="invalid-feedback">
-          Número de la tarjeta requerido
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <label for="cc-expiration" class="form-label">Fecha de caducidad</label>
-        <input type="text" class="form-control" id="cc-expiration" placeholder="xx/xx" required>
-        <div class="invalid-feedback">
-          Fecha de caducidad de la tarjeta requerida
-        </div>
-      </div>
-
-      <div class="col-md-3 cvc">
-        <label for="cc-cvv" class="form-label">CVC</label>
-        <input type="text" class="form-control" id="cc-cvv" placeholder="123" required>
-        <div class="invalid-feedback">
-          CVC requerido
-        </div>
-      </div>
-    </div>
-
-    <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar con el pago</button>
-  </form> -->
-
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
 </body>
