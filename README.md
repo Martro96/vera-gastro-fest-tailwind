@@ -1,14 +1,12 @@
-Este proyecto simula la página web para la Competición Gastronómica de las fiestas del pueblo Jaraíz de la Vera. El sitio está diseñado para promover y organizar el evento, proporcionando toda la información necesaria a los participantes, asistentes y jueces, y capturando el espíritu festivo de la comunidad.
+# Competición Gastronómica mejorada (Tailwind)
 
-Características principales:
-Diseño Responsivo: La web está optimizada para ofrecer una excelente experiencia en dispositivos móviles, tabletas y escritorios.
-Información del Evento: Secciones dedicadas a detalles sobre las competiciones, horarios, participantes, y normas del evento.
-Galería de Imágenes: Presentación visual de ediciones anteriores y destacados de la competición.
-Formulario de Inscripción: Facilidad para que los participantes se registren en línea.
-Contacto y Ubicación: Información clara sobre cómo llegar al evento y ponerse en contacto con los organizadores.
+Este proyecto es una versión mejorada del sitio web de la Competición Gastronómica de la Vera, reconstruido con Tailwind CSS para optimizar el desarrollo y mejorar la experiencia de usuario. El uso de Tailwind CSS ha permitido una personalización más eficiente y un diseño visualmente consistente y atractivo.
 
+Mejoras y Características Principales:
+Implementación de Tailwind CSS: Uso de utilidades de CSS para un diseño modular y rápido, mejorando la coherencia y personalización del sitio.
+Diseño Responsivo Mejorado: Ajustes refinados para una experiencia de usuario aún más agradable en dispositivos móviles y grandes pantallas.
+Rendimiento Optimizado: Mejora en la carga del sitio mediante la reducción de peso del CSS y optimización de recursos.
+Interfaz Actualizada: Modernización del diseño con nuevas características de UX que resaltan la vivacidad y el ambiente festivo del evento.
 Tecnologías Utilizadas:
-Frontend: HTML5, CSS3, JavaScript
-Deploy: Hospedado en Netlify para despliegue continuo y fácil mantenimiento.
-
-https://vera-competicion.netlify.app/
+Frontend: HTML5, Tailwind CSS, JavaScript
+Deploy: Hospedado en Netlify para facilitar el despliegue y mantenimiento.
